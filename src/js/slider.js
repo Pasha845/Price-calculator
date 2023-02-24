@@ -1,7 +1,7 @@
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
-
-slider.oninput = function() {
-  output.innerHTML = this.value;
+function calc() {
+  var count = document.getElementById("count");
+  var result = document.getElementById("result"); 
+  var price = 0;
+  price += parseInt(count);
+  result.innerHTML = price;
 }

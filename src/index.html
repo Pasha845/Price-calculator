@@ -17,7 +17,7 @@
         <div class="divide__item">
           <h2 class="divide__subtitle">Стоимость автомобиля</h2>
           <input class="divide__input" type="number" value="3300000">
-          <input class="divide__slider" type="range" min="1500000" max="10000000" value="3300000" step="100">
+          <input id="count" class="divide__slider" type="range" min="1500000" max="10000000" value="3300000" step="100" onchange="calc()">
         </div>
         <div class="divide__item">
           <h2 class="divide__subtitle">Первоначальный взнос</h2>
@@ -32,7 +32,8 @@
         </div>
         <div class="divide__item">
           <h2 class="divide__supertitle">Сумма договора лизинга</h2>
-          <input class="divide__subinput" type="number" value="4467313">
+          <input class="divide__subinput" id="result" type="number" value="4467313">
+          <input id="result">
         </div>
         <div class="divide__item">
           <h2 class="divide__supertitle">Ежемесячный платеж от</h2>
@@ -42,4 +43,6 @@
       </div>
     </div>
   </section>
+  <script src="js/slider.js"></script>
 </body>
+</html>

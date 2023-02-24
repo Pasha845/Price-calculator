@@ -49,20 +49,8 @@ const htmlMinify = () => {
 }
 
 const scripts = () => {
-  return src([
-    'src/js/**/*.js',
-  ])
-  .pipe(sourcemaps.init())
-  .pipe(babel({
-    presets: ['@babel/env']
-  }))
-  .pipe(uglify({
-    toplevel: true
-  }
-  ).on('error', notify.onError))
-  .pipe(sourcemaps.write())
-  .pipe(dest('dist/js'))
-  .pipe(browserSync.stream())
+  return src('src/js/**/*.js')
+    .pipe(dest('dist/js'))
 }
 
 const watchFiles = () => {
