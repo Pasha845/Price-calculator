@@ -80,6 +80,12 @@ input[type="number"]:focus {
   cursor: auto;
 }
 
+.container-slider::-webkit-slider-thumb,
+.container-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+}
+
 @media (max-width: 1439px) {
   .container {
     padding-left: 36px;
@@ -165,6 +171,23 @@ input[type="number"]:focus {
   background: none;
 }
 
+.divide__icon, .divide__elem {
+  position: absolute;
+  top: 60px;
+  right: 24px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 900;
+  color: #575757;
+}
+
+.divide__elem {
+  top: 65px;
+  right: 22px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
 .divide__slider {
   position: absolute;
   left: 0;
@@ -203,7 +226,7 @@ input[type="number"]:focus {
   position: absolute;
   top: 50px;
   right: 7px;
-  padding: 15px 17px;
+  padding: 13px 17px;
   max-width: 70px;
   font-size: 20px;
   line-height: 24px;
@@ -257,6 +280,9 @@ input[type="number"]:focus {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 36px;
+  }
+  .divide__exit {
+    grid-column: span 2;
   }
 }
 

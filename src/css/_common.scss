@@ -87,6 +87,12 @@ input[type="number"]:focus {
   cursor: auto;
 }
 
+.container-slider::-webkit-slider-thumb,
+.container-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+}
+
 @media (max-width: 1439px) {
   .container {
     padding-left: 36px;
