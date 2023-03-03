@@ -1,0 +1,204 @@
+@import '_variables.scss';
+
+.divide {
+  padding-top: 213px;
+  padding-bottom: 213px;
+  
+  &__title {
+    margin: 0;
+    margin-bottom: 32px;
+    max-width: 753px;
+    font-size: 51px;
+    line-height: 48px;
+    font-weight: 900;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 50px;
+  }
+
+  &__item {
+    grid-column: span 4;
+    position: relative;
+  }
+
+  &__subtitle,
+  &__supertitle {
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: "Gilroy";
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey;
+  }
+
+  &__supertitle {
+    margin-bottom: 8px;
+  }
+
+  &__input,
+  &__superinput {
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 14px 24px;
+    width: 100%;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 900;
+    color: $grey;
+    background-color: $grey_light;
+    transition: border-color .3s, background-color .3s;
+  }
+
+  &__input:focus,
+  &__superinput:focus,
+  &__subinput:focus {
+    outline: none;
+  }
+
+  &__input:active,
+  &__superinput:active,
+  &__subinput:active {
+    border-color: $grey_light;
+    background: none;
+  }
+
+  &__icon,
+  &__elem {
+    position: absolute;
+    top: 60px;
+    right: 24px;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 900;
+    color: $grey;
+  }
+
+  &__elem {
+    top: 65px;
+    right: 22px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  &__slider {
+    position: absolute;
+    left: 0;
+    top: 111px;
+    border-top-left-radius: 5px;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 88%;
+    height: 2px;
+    background-color: $orange;
+    appearance: none;
+    outline: none;
+  }
+  
+  &__slider::-webkit-slider-thumb {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: $orange;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  &__slider::-moz-range-thumb {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: $orange;
+    cursor: pointer;
+  }
+
+  &__superinput {
+    position: absolute;
+    top: 50px;
+    right: 7px;
+    padding: 13px 17px;
+    max-width: 70px;
+    font-size: 20px;
+    line-height: 24px;
+    background-color: $light;
+  }
+
+  &__subinput {
+    border: none;
+    padding: 0;
+    width: 100%;
+    font-size: 54px;
+    line-height: 48.6px;
+    font-weight: 900;
+    color: $dark;
+    background: none;
+  }
+
+  &__btn {
+    grid-column: span 4;
+    border: none;
+    border-radius: 40px;
+    height: 68px;
+    font-size: 29px;
+    line-height: 36px;
+    font-weight: 900;
+    color: $white;
+    background-color: $orange;
+    cursor: pointer;
+    transition: background-color .3s;
+  }
+
+  &__btn:hover {
+    background-color: $black;
+  }
+
+  &__btn:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 1119px) {
+  .divide {
+    padding-top: 64px;
+    padding-bottom: 156px;
+    
+    &__title {
+      margin-bottom: 44px;
+      width: 100%;
+    }
+
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 36px;
+    }
+
+    &__exit {
+      grid-column: span 2;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .divide {
+    padding-top: 44px;
+    padding-bottom: 64px;
+
+    &__title {
+      margin-bottom: 32px;
+      font-size: 34px;
+      line-height: 30.6px;
+    }
+  
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    &__item {
+      grid-column: span 2;
+    }
+  }
+}

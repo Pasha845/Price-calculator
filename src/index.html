@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Главная</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="divide">
+    <div class="container">
+      <h1 class="divide__title">Рассчитайте стоимость автомобиля в лизинг</h1>
+      <div class="divide__list">
+        <div class="divide__item">
+          <h2 class="divide__subtitle">Стоимость автомобиля</h2>
+          <input class="divide__input" id="input-price" type="number" value="3300000">
+          <span class="divide__icon">₽</span>
+          <input class="divide__slider" id="slider-price" type="range" min="1500000" max="10000000" value="3300000" step="10000" oninput="calc()">
+        </div>
+        <div class="divide__item">
+          <h2 class="divide__subtitle">Первоначальный взнос</h2>
+          <input class="divide__input" id="input-fee" type="number" value="420000">
+          <span>₽</span>
+          <input class="divide__superinput" id="input-fee-1" type="number" min="10" max="60" value="13" oninput="fee()">
+          <span class="divide__elem">%</span>
+          <input class="divide__slider container-slider" id="slider-fee" type="range">
+        </div>
+        <div class="divide__item">
+          <h2 class="divide__subtitle">Срок лизинга</h2>
+          <input class="divide__input" id="input-month" type="number" value="60">
+          <span class="divide__icon">мес.</span>
+          <input class="divide__slider" id="slider-month" type="range" min="6" max="120" value="60" step="10" oninput="leasing()">
+        </div>
+        <div class="divide__item divide__exit">
+          <h2 class="divide__supertitle">Сумма договора лизинга</h2>
+          <input class="divide__subinput" id="input-first" type="number" value="4467313">
+          <span>₽</span>
+        </div>
+        <div class="divide__item divide__exit">
+          <h2 class="divide__supertitle">Ежемесячный платеж от</h2>
+          <input class="divide__subinput" id="input-last" type="number" value="114455">
+          <span>₽</span>
+        </div>
+        <button class="divide__btn">Оставить заявку</button>
+      </div>
+    </div>
+  </section>
+  <script src="js/slider.js"></script>
+</body>
+</html>
